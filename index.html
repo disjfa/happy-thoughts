@@ -1,12 +1,60 @@
----
-layout: page
----
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HAPPY THOUGHTS</title>
+    <meta name="description" content="Happy Thoughts is a Hardrock/metal band from the Netherlands
+">
+
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="canonical" href="http://0.0.0.0:5000/">
+    <link rel="alternate" type="application/rss+xml" title="HAPPY THOUGHTS" href="http://0.0.0.0:5000/feed.xml">
+</head>
+
+<body>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" id="top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#top">
+        <img src="assets/happy-thoughts.jpg" alt="HAPPY THOUGHTS" class="img-fluid" title="Happy thoughts">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link js-link" href="#artists">Artists</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-link" href="#album">Album</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-link" href="#bio">Biography</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-link" href="#tour">Tour</a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex">
+        <a href="https://happythoughtsmusic.bandcamp.com" class="p-2 text-white">
+            <i class="fa fa-bandcamp"></i>
+        </a>
+        <a href="https://www.facebook.com/happythoughtsmusic/" class="p-2 text-white">
+            <i class="fa fa-facebook"></i>
+        </a>
+    </div>
+</nav>
+
 
 <div style="background-color: #000">
     <div class="container py-2">
         <div class="row">
             <div class="col-md-6 push-md-3 col-12">
-                <img src="assets/happy-thoughts.jpg" alt="{{ site.title }}" class="img-fluid">
+                <img src="assets/happy-thoughts.jpg" alt="HAPPY THOUGHTS" class="img-fluid">
             </div>
         </div>
     </div>
@@ -15,18 +63,51 @@ layout: page
     <div class="container py-3">
         <h2 class="text-center">Artists</h2>
         <div class="row">
-            {% for member in site.data.members %}
+            
                 <div class="col-12 col-sm-6 py-2">
                     <div class="card card-inverse">
-                        <img src="{{ member.image }}" alt="{{ member.name }} - {{ member.instrument }}" class="card-img img-fluid">
+                        <img src="assets/dennis.jpg" alt="Dennis - Vocals" class="card-img img-fluid">
                         <div class="card-img-overlay">
                             <h4 class="card-title">
-                                {{ member.name }} / {{ member.instrument }}
+                                Dennis / Vocals
                             </h4>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
+            
+                <div class="col-12 col-sm-6 py-2">
+                    <div class="card card-inverse">
+                        <img src="assets/dick.jpg" alt="Dick - Guitar" class="card-img img-fluid">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">
+                                Dick / Guitar
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-sm-6 py-2">
+                    <div class="card card-inverse">
+                        <img src="assets/brady.jpg" alt="Brady - Bass/Backing Vocals" class="card-img img-fluid">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">
+                                Brady / Bass/Backing Vocals
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-sm-6 py-2">
+                    <div class="card card-inverse">
+                        <img src="assets/robin.jpg" alt="Robin - Drums" class="card-img img-fluid">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">
+                                Robin / Drums
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            
         </div>
     </div>
 </div>
@@ -113,3 +194,26 @@ layout: page
         </div>
     </div>
 </div>
+
+
+<footer class="container">
+    <div class="row">
+        <div class="col-xs-12 p-3">
+            <a href="https://happythoughtsmusic.bandcamp.com" class="p-2 text-white">
+                <i class="fa fa-bandcamp"></i>
+                bandcamp
+            </a>
+            <a href="https://www.facebook.com/happythoughtsmusic/" class="p-2 text-white">
+                <i class="fa fa-facebook"></i>
+                facebook
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HAPPY THOUGHTS</title>
+    <description>Happy Thoughts is a Hardrock/metal band from the Netherlands
+</description>
+    <link>http://0.0.0.0:5000/</link>
+    <atom:link href="http://0.0.0.0:5000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 07 Aug 2017 21:49:37 +0000</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2017 21:49:37 +0000</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+  </channel>
+</rss>
