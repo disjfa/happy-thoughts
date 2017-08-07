@@ -1,0 +1,115 @@
+---
+layout: page
+---
+
+<div style="background-color: #000">
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-md-6 push-md-3 col-12">
+                <img src="assets/happy-thoughts.jpg" alt="{{ site.title }}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page" id="artists">
+    <div class="container py-3">
+        <h2 class="text-center">Artists</h2>
+        <div class="row">
+            {% for member in site.data.members %}
+                <div class="col-12 col-sm-6 py-2">
+                    <div class="card card-inverse">
+                        <img src="{{ member.image }}" alt="{{ member.name }} - {{ member.instrument }}" class="card-img img-fluid">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">
+                                {{ member.name }} / {{ member.instrument }}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="text-right py-3">
+        <a href="#top" class="js-link">
+            <i class="fa fa-arrow-up"></i>
+            top
+        </a>
+    </div>
+</div>
+<div class="ryoko ryoko-90" id="album" style="background-image: url('assets/endless-dreams.jpg')">
+    <div class="ryoko-shade ryoko-body py-3">
+        <div class="text-center">
+            <h2>Endless Dreams for Hopeless Lives</h2>
+            <iframe style="border: 0; width: 350px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=4291806725/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="http://happythoughtsmusic.bandcamp.com/album/endless-dreams-for-hopeless-lives">Endless Dreams for Hopeless Lives by Happy Thoughts</a></iframe>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="text-right py-3">
+        <a href="#top" class="js-link">
+            <i class="fa fa-arrow-up"></i>
+            top
+        </a>
+    </div>
+</div>
+<div class="page" id="bio">
+    <div class="container py-3">
+        <h2 class="text-center">Bio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur iure nihil officia sunt unde voluptatibus? Cum earum hic ipsa perspiciatis quas reprehenderit repudiandae, vel. Id laudantium odit quas soluta!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam debitis eius fuga fugiat, incidunt ipsum iure laudantium magni necessitatibus nemo nisi officia placeat praesentium provident quaerat ratione reiciendis sint!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda culpa delectus dignissimos ex ipsam ipsum magni vel. Distinctio ex iste labore, laborum nesciunt officia placeat quo quod repellat sunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos incidunt mollitia praesentium tempora. Aliquam delectus eaque earum eius est explicabo id minima, necessitatibus officiis porro quasi quisquam quos repellendus?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti mollitia nam perferendis provident? Assumenda dolores excepturi impedit ipsum labore molestias nisi nulla, porro quae tempore unde veritatis vitae voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa debitis, enim illum in magnam ut vel vero? Delectus deserunt dolore eaque eos excepturi impedit laudantium perspiciatis? Cum dolorem nisi ratione!</p>
+    </div>
+</div>
+<div class="container">
+    <div class="text-right py-3">
+        <a href="#top" class="js-link">
+            <i class="fa fa-arrow-up"></i>
+            top
+        </a>
+    </div>
+</div>
+<div style="background-color: #000">
+    <div class="page" id="tour">
+        <div class="container py-3">
+            <h2 class="text-center py-3">Tour</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        31 oktober
+                    </td>
+                    <td>
+                        latenstaan
+                    </td>
+                    <td>
+                        <a href="#">tickets</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        ... more to come
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-right py-3">
+            <a href="#top" class="js-link">
+                <i class="fa fa-arrow-up"></i>
+                top
+            </a>
+        </div>
+    </div>
+</div>
