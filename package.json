@@ -16,7 +16,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "normalize-scss": "^7.0.0",
-    "ryoko-headers": "^0.1.2"
+    "ryoko-headers": "^0.1.2",
+    "vue": "^2.4.2"
   },
   "devDependencies": {
     "gulp-gh-pages": "^0.5.4"

@@ -14,7 +14,7 @@ gulp.task('watch', function () {
   gulp.watch('scss/**/*.scss', ['styles'])
 })
 
-gulp.task('copy', ['copy-fonts', 'copy-jquery', 'copy-bootstrap', 'copy-tether'], function () {
+gulp.task('copy', ['copy-fonts', 'copy-jquery', 'copy-bootstrap', 'copy-tether', 'copy-vue'], function () {
 
 })
 
@@ -38,6 +38,11 @@ gulp.task('copy-tether', function () {
     .pipe(gulp.dest('./site/js'));
 });
 
+gulp.task('copy-vue', function () {
+  gulp.src('./node_modules/vue/dist/vue.min.js')
+    .pipe(gulp.dest('./site/js'));
+});
+
 gulp.task('jekyll', function () {
   let jekyll = child.spawn('jekyll', ['serve',
     '--watch',
@@ -58,7 +63,9 @@ gulp.task('jekyll', function () {
 })
 
 gulp.task('jekyll-deploy', function () {
-  let jekyll = child.spawn('jekyll', ['build'])
+  let jekyll = child.spawn('jekyll', ['build',
+    '--config=_config.yml'
+  ])
 
   let jekyllLogger = function (buffer) {
     buffer.toString()
@@ -96,7 +103,7 @@ gulp.task('browser-sync', function () {
   })
 })
 
-gulp.task('deploy', ['jekyll-deploy'], function () {
+gulp.task('deploy', [], function () {
   return gulp.src('./_site/**/*')
     .pipe(ghPages())
 })
