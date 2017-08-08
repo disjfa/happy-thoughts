@@ -152,37 +152,11 @@
         </a>
     </div>
 </div>
-<div style="background-color: #000">
+<div style="background-color: #000" id="vue-app">
     <div class="page" id="tour">
         <div class="container py-3">
             <h2 class="text-center py-3">Tour</h2>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                        31 oktober
-                    </td>
-                    <td>
-                        latenstaan
-                    </td>
-                    <td>
-                        <a href="#">tickets</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        ... more to come
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+            <tour-component></tour-component>
         </div>
     </div>
     <div class="container">
@@ -194,6 +168,26 @@
         </div>
     </div>
 </div>
+<script type="x-template" id="tour-component">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Venue</th>
+            <th>City</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in items">
+            <td v-html="getDate(item.datetime)"></td>
+            <td v-html="item.venue.name"></td>
+            <td v-html="item.venue.city"></td>
+            <td><a :href="item.url" class="btn btn-sm btn-primary">tickets</a></td>
+        </tr>
+        </tbody>
+    </table>
+</script>
 
 
 <footer class="container">
@@ -214,6 +208,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/vue.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
