@@ -2,8 +2,11 @@
   min-height: 90vh;
 }
 .navbar-brand {
+  padding: 0;
   img {
-    height: 20px;
-    transform: scale(3);
+    margin-top: -.5rem;
+    margin-bottom: -.5rem;
+    height: 56px;
+    width: 56px;
   }
 }

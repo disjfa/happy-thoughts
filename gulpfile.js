@@ -6,6 +6,9 @@ let sass = require('gulp-sass')
 let child = require('child_process')
 let gutil = require('gulp-util')
 let ghPages = require('gulp-gh-pages')
+let browserify = require('browserify')
+let vueify = require('vueify')
+let source = require('vinyl-source-stream')
 
 gulp.task('default', ['copy', 'jekyll', 'browser-sync', 'watch'], function () {
 })
@@ -14,34 +17,14 @@ gulp.task('watch', function () {
   gulp.watch('scss/**/*.scss', ['styles'])
 })
 
-gulp.task('copy', ['copy-fonts', 'copy-jquery', 'copy-bootstrap', 'copy-tether', 'copy-vue'], function () {
+gulp.task('copy', ['copy-fonts'], function () {
 
 })
 
 gulp.task('copy-fonts', function () {
   gulp.src('./node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('./site/fonts'));
-});
-
-gulp.task('copy-jquery', function () {
-  gulp.src('./node_modules/jquery/dist/jquery.min.*')
-    .pipe(gulp.dest('./site/js'));
-});
-
-gulp.task('copy-bootstrap', function () {
-  gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
-    .pipe(gulp.dest('./site/js'));
-});
-
-gulp.task('copy-tether', function () {
-  gulp.src('./node_modules/tether/dist/js/tether.min.js')
-    .pipe(gulp.dest('./site/js'));
-});
-
-gulp.task('copy-vue', function () {
-  gulp.src('./node_modules/vue/dist/vue.min.js')
-    .pipe(gulp.dest('./site/js'));
-});
+    .pipe(gulp.dest('./site/fonts'))
+})
 
 gulp.task('jekyll', function () {
   let jekyll = child.spawn('jekyll', ['serve',
@@ -91,6 +74,15 @@ gulp.task('styles', function () {
       includePaths: ['./node_modules/']
     }).on('error', sass.logError))
     .pipe(gulp.dest('./site/css/'))
+})
+
+// Basic usage
+gulp.task('scripts', function () {
+  browserify('./js/happy-thoughts.js')
+    .transform(vueify)
+    .bundle()
+    .pipe(source('happy-thoughts.js'))
+    .pipe(gulp.dest('./site/js'))
 })
 
 gulp.task('browser-sync', function () {
